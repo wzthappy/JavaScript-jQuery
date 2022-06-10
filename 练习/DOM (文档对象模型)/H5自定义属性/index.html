@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+	<body>
+		<div getTime="20" data-index="2" data-list-name="andy"></div>
+		
+		<script type="text/javascript">
+			var div = document.querySelector('div');
+			// console.log(div.getTime);   // undefined
+			console.log(div.getAttribute('getTime'));  // 20
+			div.setAttribute('data-time',20);
+			console.log(div.getAttribute('data-index'));  // 2
+			console.log(div.getAttribute('data-list-name')); // andy
+			// H5新增的获取自定义属性的方法
+			console.log(div.dataset);   // {index: '2', time: '20'}
+			
+			console.log(div.dataset.index);  // 2
+			console.log(div.dataset['time']);  // 20
+			console.log(div.dataset.listName);  // andy
+			console.log(div.dataset['listName']);  // andy
+		</script>
+	</body>
+</html>

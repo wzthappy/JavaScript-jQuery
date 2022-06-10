@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script type="text/javascript">
+			// js 是编程语言 有很强的逻辑性 在里面： 实现这个要求的思路 先怎么做后怎么做
+			var apple1 = '青苹果';
+			var apple2 = '红苹果';
+			// 1. 我们需要一个临时变量帮助我们
+			var temp;  //声明了一个临时变量为空
+			// 2. 把apple1 给我们的临时变量 temp
+			temp = apple1;
+			// 3. 把apple2 里面的苹果给 apple1
+			apple1 = apple2;
+			// 4. 把临时变量里面的值给 apple2
+			apple2 = temp;
+			console.log(apple1);  // 红苹果
+			console.log(apple2);  // 青苹果
+		</script>
+	</head>
+	<body>
+		
+	</body>
+</html>

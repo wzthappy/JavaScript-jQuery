@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script type="text/javascript">
+			// o 出现的位置及次数
+			var str = 'oabcoefoxyozzopp';
+			var index = str.indexOf('o'); // 3
+			var num = 0;
+			// console.log(index);
+			while (index != -1) {
+				console.log(index);
+				num++;
+				index = str.indexOf('o', index + 1); // 第一次 从4开始... 
+			}
+			console.log('o出现的次数是：' + num);
+
+			// 课后作业 ['red','blue','red','green','red'];  求 red 出现的位置和次数
+			var arr = ['red', 'blue', 'red', 'green', 'red'];
+			var index = arr.indexOf('red');
+			var num = 0;
+			while (index != -1) {
+				console.log(index);
+				num++;
+				index = arr.indexOf('red', index + 1);
+			}
+			console.log('数组 "red" 出现的次数是：' + num);
+		</script>
+	</head>
+	<body>
+
+	</body>
+</html>

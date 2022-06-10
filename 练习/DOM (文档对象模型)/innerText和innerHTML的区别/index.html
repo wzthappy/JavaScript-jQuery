@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+	<body>
+		<div></div>
+		<p></p>
+		<h5>
+			我是文字
+			<span>123</span>
+		</h5>
+		
+		<script type="text/javascript">
+			// innerTxet 和 innerHTML的区别
+			// 1. innerTxet 不识别html标签  去除空格和换行
+			var div = document.querySelector('div');
+			div.innerText = '<strong>今天是: </strong> 2022 年';	
+
+			// 2. innerHTML  识别html标签  保留空格和换行的
+			var p = document.querySelector('p');
+			p.innerHTML = '<strong>今天是: </strong> 2022 年';
+			
+			// 这两个属性是可读写的  可以获取元素里面的内容
+			var h5 = document.querySelector('h5');
+			console.log(h5.innerText);
+			console.log(h5.innerHTML);
+		</script>
+	</body>
+</html>

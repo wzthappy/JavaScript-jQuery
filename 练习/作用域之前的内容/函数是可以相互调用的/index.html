@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script type="text/javascript">
+			// 函数是可以相互调用的
+			function fn1() {
+				console.log(11);
+				fn2();   // 在fn1 函数里面调用了 fn2 函数
+			}
+			fn1();
+			
+			function fn2() {
+				console.log(22);
+			}
+		</script>
+	</head>
+	<body>
+
+	</body>
+</html>

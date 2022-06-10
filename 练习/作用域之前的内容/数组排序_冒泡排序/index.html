@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script type="text/javascript">
+			// var arr = [5, 4, 3, 2, 1];
+			var arr = [23,42,112,3,21,3,5,78,7,1]
+			for (var i = 0; i < arr.length - 1; i++) { // 外层循环管趟数
+				for (var j = 0; j < arr.length - i - 1; j++) { // 里面的循环管 每一趟的交换次数
+					// 内部交换2个变量的值 前一个和后一个数组元素相比较
+					if (arr[j] > arr[j + 1]) {
+						var temp = arr[j];
+						arr[j] = arr[j + 1];
+						arr[j + 1] = temp;
+					}
+				}
+			}
+			console.log(arr.toString());
+		</script>
+	</head>
+	<body>
+
+	</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script type="text/javascript">
+			// 如果是闰年，则2月份是29天，如果是平年，则2月份是28天
+			function backDay() {
+				var year = prompt('请您输入年份：');
+				if (isRunYear(year)) {
+					alert('当前年份是闰年，2月份有29天');
+				} else {
+					alert('当前年份是平年，2月份有28天');
+				}
+			}
+			backDay();
+
+			// 判断是否为闰年的函数
+			function isRunYear(year) {
+				// 如果是闰年我们返回 true  否则 返回 false
+				var flag = false;
+				if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0) {
+					flag = true;
+				}
+				return flag;
+			}
+		</script>
+	</head>
+	<body>
+
+	</body>
+</html>

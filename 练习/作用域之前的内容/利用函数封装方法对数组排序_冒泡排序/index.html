@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script type="text/javascript">
+			// 利用函数封装的方法对数组排序 冒泡排序 sort 排序
+			function sort(arr) {
+				for (var i = 0 ; i < arr.length - 1 ; i++) {
+					for (var j = 0 ; j < arr.length - i - 1 ; j++) {
+						if (arr[j] > arr[j+1]) {
+							var temp = arr[j+1];
+							arr[j+1] = arr[j];
+							arr[j] = temp;
+						}
+					}
+				}
+				return arr;
+			}
+			var arr1 = sort([1,4,2,9]);
+			console.log(arr1.toString());
+			var arr2 = sort([11,7,22,999]);
+			console.log(arr2.toString());
+		</script>
+	</head>
+	<body>
+		
+	</body>
+</html>

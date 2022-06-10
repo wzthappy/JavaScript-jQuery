@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			body {
+				background-color: #000;
+			}
+			.c-nav {
+				position: relative;
+				top: 50px;
+				left: 50%;
+				transform: translateX(-50%);
+				background-color: #fff;
+				width: 60%;
+				height: 30px;
+			}
+			ul {
+				width: 100%;
+				height: 100%;
+				line-height: 30px;
+				text-align: center;
+			}
+			ul li {
+				float: left;
+				padding: 0 10px;
+				list-style-type: none;
+			}
+			a {
+				color: #000000;
+				text-decoration: none;
+			}
+			.cloud {
+				position: absolute;
+				top: 0;
+				left: 0;
+				height: 10px;
+				background-color: rgba(0,0,0,.5);
+			}
+		</style>
+		<script src="js/animate.js"></script>
+		<script type="text/javascript">
+			window.addEventListener('load', function() {
+				// 1. 获取元素
+				var cloud = document.querySelector('.cloud');
+				var c_nav = document.querySelector('.c-nav');
+				var lis = c_nav.querySelectorAll('li');
+				// 2. 给所有的小li绑定事件
+				// 这个current 作为筋斗云的起始位置
+				var current = 0;
+				for (var i = 0; i < lis.length; i++) {
+					// (1) 鼠标经过把当前小li 的位置作为目标值
+					lis[i].addEventListener('mouseenter', function() {
+						animate(cloud, this.offsetLeft);
+					});
+					// (2) 鼠标离开就回到起始的位置
+					lis[i].addEventListener('mouseleave', function() {
+						animate(cloud, current);
+						
+					});
+					// (3) 当我们鼠标点击，就把当前位置作为目标值
+					lis[i].addEventListener('click', function() {
+						current = this.offsetLeft;
+					});
+				}
+			});
+		</script>
+	</head>
+	<body>
+		<div id="c_nav" class="c-nav">
+			<span class="cloud"></span>
+			<ul>
+				<li class="current"><a href="#">首页新闻</a></li>
+				<li><a href="#">师资力量</a></li>
+				<li><a href="#">活动策划</a></li>
+				<li><a href="#">企业文化</a></li>
+				<li><a href="#">招聘信息</a></li>
+				<li><a href="#">公司简介</a></li>
+				<li><a href="#">我是佩奇</a></li>
+				<li><a href="#">啥事佩奇</a></li>
+			</ul>
+		</div>
+		
+		<script type="text/javascript">
+			var li = document.querySelectorAll('li');
+			var cloud = document.querySelector('.cloud');
+			cloud.style.width = li[0].offsetWidth + 'px';
+		</script>
+	</body>
+</html>

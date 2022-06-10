@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			.box {
+				width: 200px;
+				height: 200px;
+				background-color: pink;
+				padding: 10px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box" style="width: 200px;"></div>
+		
+		<script type="text/javascript">
+			// offset与style的区别
+			var box = document.querySelector('.box');
+			console.log(box.offsetWidth);
+			console.log(box.style.width);
+			box.style.width = '300px';
+			
+		</script>
+	</body>
+</html>

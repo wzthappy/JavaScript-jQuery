@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script type="text/javascript">
+			// 字符串操作方法
+			// 1. concat('字符串1','字符串2'....)
+			var str = 'andy';
+			console.log(str.concat('red')); // andyred
+
+			// 2. substr('截取的起始位置','截取几个字符')
+			var str1 = '改革春风吹满地';
+			console.log(str1.substr(2, 2)); // 春风   
+			// 第一个2 是索引号的2 从第几个开始  第二个2 是取几个字符
+
+			// 其他方法
+			// 1. 替换字符 replace('被替换的字符','替换为的字符')  它只会替换第一个字符
+			var str2 = 'naanadi';
+			console.log(str2.replace('a', 'b')); // nbanadi
+			// 有一个字符串 'abcoefoxyozzopp' 要求 把里面所用的 o 替换为 *
+			var str3 = 'abcoefoxyozzopp';
+			while (str3.indexOf('o') !== -1) {
+				str3 = str3.replace('o', '*');
+			}
+			console.log(str3);  // abc*ef*xy*zz*pp
+
+			// 2. 字符串转换为数组 split('分隔符')    前面我们学过 join 把数组转换为字符串
+			var str4 = 'red,pink,blue';
+			console.log(str4.split(','));  // ['red', 'pink', 'blue']
+			var str5 = 'red&pink&blue';
+			console.log(str5.split('&'));  // ['red', 'pink', 'blue']
+			
+		</script>
+	</head>
+	<body>
+
+	</body>
+</html>

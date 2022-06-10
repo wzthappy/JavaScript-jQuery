@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			.bg {
+				background-color: #000000;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="one two"></div>
+		<button>开关灯</button>
+		
+		<script type="text/javascript">
+			// classList 返回元素的类名
+			var div = document.querySelector('div');
+			// console.log(div.classList[0]);
+			// console.log(div.classList[1]);
+			// 1. 添加类名 是在后面追加类名不会覆盖一前的类名
+			div.classList.add('three');
+			// 2. 删除类名
+			div.classList.remove('one');
+			// 3. 切换类
+			var btn = document.querySelector('button');
+			btn.addEventListener('click', function() {
+				document.body.classList.toggle('bg');
+			});
+		</script>
+	</body>
+</html>

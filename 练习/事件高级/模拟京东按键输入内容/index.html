@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+	<body>
+		<input type="text">
+		
+		<script type="text/javascript">
+			// 搜索框获得焦点: 使用 js 里面的 focus() 方法 
+			var search = document.querySelector('input');
+			document.addEventListener('keyup', function(e) {
+				// console.log(e.keyCode);
+				if (e.keyCode === 83) {
+					search.focus();
+				}
+			});
+		</script>
+	</body>
+</html>

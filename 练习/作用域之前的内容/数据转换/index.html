@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script type="text/javascript">
+			// 1. 把数字型转换为 字符串型 
+			// 变量.toString()
+			var num = 10;
+			var str = num.toString();
+			console.log(str);
+			console.log(typeof str);
+			// 我们利用 String();
+			console.log(String(num));
+			// 利用 + 拼接字符串的方法实现转换效果
+			console.log(num + '');
+			
+			
+			// 2. 转换为 数字型
+			// parseInt(变量)  可以把 字符型转换为数字型 得到的是整数
+			var age = prompt('请输入您的年龄：');
+			console.log(parseInt(age));
+			console.log(parseInt('3.14'));  // 3 取整
+			console.log(parseInt('3.94'));  // 3 取整
+			console.log(parseInt('120px'));  // 120
+			// parseFloat(变量)   可以把 字符型转换为数字型 得到的是需小数 浮点数
+			console.log(parseFloat('3.14'));  //3.14
+			console.log(parseFloat('120.1px'));  //120
+			// 利用 Number(变量)
+			var str2 = '123';
+			console.log(Number(str2));
+			console.log(Number('520'));
+			// 利用了算数运算 - * /  隐式转换
+			console.log('12' - 0);      // 12 
+			console.log('123' - '120');   // 3
+			console.log('123' * 1);      // 123
+			
+		</script>
+	</head>
+	<body>
+		
+	</body>
+</html>

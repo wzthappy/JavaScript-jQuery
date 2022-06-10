@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script type="text/javascript">
+			var sum = 0;
+			while (true) {
+				var i = prompt('请输入您要的操作：\n 1.存取 \n 2.取钱 \n 3.显示余额 \n 4.退出');
+				switch (parseInt(i)) {
+					case 1:
+						var s = prompt('请您输入存的钱数：');
+						sum += parseFloat(s);
+						alert('您现在的钱数是：' + sum);
+						break;
+					case 2:
+						var s = prompt('请您输入取的钱数：');
+						sum -= s;
+						alert('您现在的钱数是：' + sum);
+						break;
+					case 3:
+						alert('您现在的钱数是：' + sum);
+						break;
+					case 4:
+						alert('您正在退出!');
+						break;
+					default:
+						alert('请输入正确的数字!');
+						break;
+				}
+				if (i == 4) {
+					break;
+				}
+			}
+		</script>
+	</head>
+	<body>
+
+	</body>
+</html>

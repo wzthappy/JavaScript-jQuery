@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script type="text/javascript">
+			// 1 ~ 10 的整数
+			function getRandom(min, max) {
+				return Math.floor(Math.random() * (max - min + 1)) + min;
+			}
+			var random = getRandom(1, 10);
+			while(true) {   // 死循环
+				var num = prompt('你来猜？ 输入一个1~10之间的一个数字');
+				if (num > random) {
+					alert('你猜大了');
+				} else if (num < random) {
+					alert('你猜小了');
+				} else {
+					alert('猜对了');
+					break;   // 退出整个循环结束程序
+				}
+			}
+			
+			// 1 ~ 50 的整数     10 次
+			function getRandom(min, max) {
+				return Math.floor(Math.random() * (max - min + 1)) + min;
+			}
+			var random = getRandom(1, 50);
+			for (var i = 0 ; i < 10 ; i++) {
+				var num = prompt('你来猜？ 输入一个1~50之间的一个数字');
+				if (num > random) {
+					alert('你猜大了');
+				} else if (num < random) {
+					alert('你猜小了');
+				} else {
+					alert('猜对了');
+					break;   // 退出整个循环结束程序
+				}
+				if (i == 9) {
+					alert('没机会了');
+					break;
+				} else {
+					alert('你还有'+ (9 - i) +'次机会');
+				}
+			}
+		</script>
+	</head>
+	<body>
+
+	</body>
+</html>

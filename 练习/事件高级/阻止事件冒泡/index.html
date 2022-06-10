@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			.father {
+				width: 500px;
+				height: 500px;
+				margin: 100px auto;
+				overflow: hidden;
+				background-color: pink;
+			}
+			.son {
+				width: 400px;
+				height: 400px;
+				text-align: center;
+				line-height: 400px;
+				font-size: 30px;
+				color: #fff;
+				margin: 50px auto;
+				background-color: #0000FF;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="father">
+			<div class="son">son儿子</div>
+		</div>
+		
+		<script type="text/javascript">
+			// 常见事件对象的属性和方法
+			// 阻止冒泡  dom 推荐的标准 stopPropagation()
+			var son = document.querySelector('.son');
+			son.addEventListener('click',function(e) {
+				alert('son');
+				e.stopPropagation();  // stop 停止  Propagation 传播
+			}, false);
+			var father = document.querySelector('.father');
+			father.addEventListener('click',function() {
+				alert('father');
+			}, false);
+			
+			document.addEventListener('click',function() {
+				alert('document');
+			});
+		</script>
+	</body>
+</html>

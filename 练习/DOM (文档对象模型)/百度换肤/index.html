@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			* {
+				padding: 0;
+				margin: 0;
+			}
+
+			body {
+				background: url(img/soldier11.jpg) no-repeat center top;
+			}
+
+			li {
+				list-style-type: none;
+			}
+
+			.baidu {
+				overflow: hidden;
+				margin: 100px auto;
+				background-color: #fff;
+				width: 410px;
+				padding-top: 3px;
+			}
+
+			.baidu li {
+				float: left;
+				margin: 0 1px;
+				cursor: pointer;
+			}
+
+			.baidu img {
+				width: 100px;
+			}
+		</style>
+	</head>
+	<body>
+		<ul class="baidu">
+			<li><img src="img/soldier11.jpg"></li>
+			<li><img src="img/soldier22.jpg"></li>
+			<li><img src="img/soldier33.jpg"></li>
+			<li><img src="img/soldier44.jpg"></li>
+		</ul>
+
+		<script type="text/javascript">
+			// 1. 获取元素
+			var imgs = document.querySelector('.baidu').querySelectorAll('img');
+			// 2. 循环注册事件
+			for (var i = 0; i < imgs.length; i++) {
+				imgs[i].onclick = function() {
+					// this.src 就是我们点击图片的路径
+					// console.log(this.src);
+					// 把这个路径 this.src 给body 就可以了
+					document.body.style.backgroundImage = 'url('+ this.src +')';
+				}
+			}
+		</script>
+	</body>
+</html>
